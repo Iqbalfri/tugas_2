@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Tiket Pesawat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="orang.png">
+    
+    <div class="container">
+        <h2>Form Pemesanan Tiket Pesawat</h2>
+        <h3>Informasi Penumpang</h3>
+        <form action="/submit" method="POST">
+            <div>
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
+            </div>
+
+            <div>
+                <label for="identitas">Nomor Identitas (KTP/Paspor):</label>
+                <input type="text" id="identitas" name="identitas" placeholder="Masukkan Nomor Identitas" required>
+            </div>
+
+            <div>
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="email">Alamat Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan Email" required>
+            </div>
+
+            <div>
+                <label for="telepon">Nomor Telepon:</label>
+                <input type="tel" id="telepon" name="telepon" placeholder="Masukkan Nomor Telepon" required>
+            </div>
+
+            <h3>Informasi Penerbangan</h3>
+
+            <div>
+                <label for="bandara_asal">Bandara Keberangkatan:</label>
+                <select id="bandara_asal" name="bandara_asal" required>
+                    <option value="Soekarno-Hatta (CGK)">Soekarno-Hatta (CGK)</option>
+                    <option value="Ngurah Rai (DPS)">Ngurah Rai (DPS)</option>
+                    <option value="Juanda (SUB)">Juanda (SUB)</option>
+                    <option value="Kualanamu (KNO)">Kualanamu (KNO)</option>
+                    <option value="Bandara International Lombok (BIL)">Bandara International Lombok</option>
+                    <option value="Halim Perdanakusuma (HLP)">Halim Perdanakusuma (HLP)</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="bandara_tujuan">Bandara Tujuan:</label>
+                <select id="bandara_tujuan" name="bandara_tujuan" required>
+                    <option value="Soekarno-Hatta (CGK)">Soekarno-Hatta (CGK)</option>
+                    <option value="Ngurah Rai (DPS)">Ngurah Rai (DPS)</option>
+                    <option value="Juanda (SUB)">Juanda (SUB)</option>
+                    <option value="Kualanamu (KNO)">Kualanamu (KNO)</option>
+                    <option value="Bandara International Lombok (BIL)">Bandara International Lombok</option>
+                    <option value="Halim Perdanakusuma (HLP)">Halim Perdanakusuma (HLP)</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="tanggal_berangkat">Tanggal Keberangkatan:</label>
+                <input type="date" id="tanggal_berangkat" name="tanggal_berangkat" required>
+            </div>
+
+            <div>
+                <label for="tanggal_pulang">Tanggal Kepulangan (opsional):</label>
+                <input type="date" id="tanggal_pulang" name="tanggal_pulang">
+            </div>
+
+            <div>
+                <label for="jumlah_penumpang">Jumlah Penumpang:</label>
+                <input type="number" id="jumlah_penumpang" name="jumlah_penumpang" min="1" max="10" value="1" required>
+            </div>
+
+            <div>
+                <label for="kelas">Kelas Penerbangan:</label>
+                <select id="kelas" name="kelas" required>
+                    <option value="Ekonomi">Ekonomi</option>
+                    <option value="Bisnis">Bisnis</option>
+                    <option value="First Class">First Class</option>
+                </select>
+            </div>
+
+            <h3>Metode Pembayaran</h3>
+
+            <div>
+                <label for="metode_pembayaran">Pilih Metode Pembayaran:</label>
+                <select id="metode_pembayaran" name="metode_pembayaran" required>
+                    <option value="Kartu Kredit">Kartu Kredit</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="E-Wallet">E-Wallet (GoPay, OVO, dll.)</option>
+                </select>
+            </div>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
